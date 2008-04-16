@@ -81,12 +81,12 @@ function parse_nofollow_reciprocity($matches)
 		  wp_has_no_rel_nofollow( $matches[1] ) &&
 		  wp_has_no_rel_nofollow( $matches[4] ) )
 	{
-		return '<a rel="nofollow" href="' . $matches[2] . '//' . $matches[3] . '"' . $matches[1] . $matches[4] . '>' . $matches[5] . '</a>';
+		return '<a rel="nofollow" href="' . $matches[2] . '//' . $matches[3] . '" ' . $matches[1] . $matches[4] . '>' . $matches[5] . '</a>';
 	}
 	else
 	{
 		// Do nothing
-		return '<a href="' . $matches[2] . '//' . $matches[3] . '"' . $matches[1] . $matches[4] . '>' . $matches[5] . '</a>';
+		return '<a href="' . $matches[2] . '//' . $matches[3] . '" ' . $matches[1] . $matches[4] . '>' . $matches[5] . '</a>';
 	}
 }
 	

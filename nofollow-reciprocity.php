@@ -5,7 +5,7 @@ Plugin Name: Nofollow reciprocity
 Plugin URI: http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php
 Description: Searches for links to large sites using 'nofollow' tags for external links, and puts the same tag on links to those sites (Wikipedia.org, StumbleUpon.com, and similar)
 Author: Lazar Kovacevic(based on 2 plugins quoted below)
-Version: 1.0
+Version: 1.5
 Author URI: http://www.inverudio.com
 */
 

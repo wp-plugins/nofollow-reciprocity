@@ -4,7 +4,7 @@ Donate link: http://www.explore-ideas.com/
 Tags: blog,comment,comments,google,link,links,nofollow,page,pages,plugin,Post,posts,seo,social,url,wordpress
 Requires at least: 1.5
 Tested up to: 2.5
-Stable tag: 2.0
+Stable tag: trunk
 
 Improves your blog pagerank and search engines rankings (search engine optimization).
 
@@ -47,7 +47,8 @@ Although you can add individual sites to this blacklist, the intention of this p
 
 On your blog, yes. On the web, only if you spread the word and blog about it.
 
-== Also recommended ==
+== Other ==
 
-* [Antisocial](http://andybeard.eu/2007/07/sphinn-sociable-wordpress-plugin.html)
+* This plugin is based on [Wikipedia nofollow](http://whatjapanthinks.com/wikipedia-nofollow/) and [Identify External Links](http://txfx.net/code/wordpress/identify-external-links/).
+* I also recommend [Antisocial](http://andybeard.eu/2007/07/sphinn-sociable-wordpress-plugin.html)
 

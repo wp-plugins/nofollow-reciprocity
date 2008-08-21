@@ -1,12 +1,12 @@
 === Nofollow Reciprocity ===
 Contributors: lakinekaki
 Donate link: http://www.explore-ideas.com/
-Tags: post,comments,google,seo,post,posts,plugin,links,nofollow,
+Tags: blog,comment,comments,google,link,links,nofollow,page,pages,plugin,Post,posts,seo,social,url,wordpress
 Requires at least: 1.5
 Tested up to: 2.5
 Stable tag: trunk
 
-Automatically improves your Wordpress blog ranking in Search Engines (Search Engine Optimization).
+Improves your blog pagerank and search engines rankings (search engine optimization).
 
 == Description ==
 
@@ -19,10 +19,37 @@ This plugin detects links to above mentioned sites, and puts 'nofollow' tags on 
 Some features:
 
 * Increases your blog rankings in Search Engines
+* [Redistributes PageRank to small Websites](http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php)
 
 == Installation ==
 
-1. Unzip into your `/wp-content/plugins/` directory. If you're uploading it make sure to upload
-the top-level folder. Don't just upload all the php files and put them in `/wp-content/plugins/`.
+1. Unzip and upload `nofollow-reciprocity.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. That's it!
+3. Remember to delete WP-Cache if you have that plugin active. Otherwise, you may not see effect of this plugin immediately.
+4. If you want to add nofollow in comment author's url's whose link point to blacklisted sites, add at the end of the code in 'nofollow-reciprocity.php' file this line: 
+
+`<?php add_filter('get_comment_author_link', 'wp_nofollow_reciprocity', 999); ?>`
+
+That's it! Watch the blog traffic statistics. 
+
+
+== Frequently Asked Questions ==
+
+= Why is site X on the list when it does not use nofollow? =
+
+Blacklisted sites are from the 'Top 1000' Quantcast list. Most of random sites from the list that I checked use nofollow. 
+
+= How do I add or remove sites from the list? =
+
+You can add or remove sites directly in the 'nofollow-reciprocity.php' file. 
+
+Although you can add individual sites to this blacklist, the intention of this plugin is to create a massive effect. Instead of adding a handful of websites, consider adding many. You are welcome to [send me lists](http://www.inverudio.com/contact.php) of bad sites you find, or good ones that are on the current list. Eventually, we will have an ultimate list of nofollow sites.
+
+= Do you think this plugin will have a significant effect? =
+
+On your blog, yes. On the web, only if you spread the word and blog about it.
+
+== Also recommended ==
+
+* [Antisocial](http://andybeard.eu/2007/07/sphinn-sociable-wordpress-plugin.html)
+

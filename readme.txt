@@ -14,7 +14,7 @@ Most big sites by default use 'nofollow' tags therefore not trusting external li
 
 This plugin detects links to above mentioned sites, and puts 'nofollow' tags on them. 'Do unto others as you would have others do unto you.' WordPress is a major blogging platform, with tens of millions of users. If many people using WordPress use this plugin, other big sites may reconsider their 'nofollow' strategy. This plugin expands on Wikipedia nofollow plugin hacked by a revolted blogger. 
 
-**[Download now!](http://wordpress.org/extend/plugins/nofollow-reciprocity/download/)**
+**[Download now!](http://downloads.wordpress.org/plugin/nofollow-reciprocity.zip)**
 
 Some features:
 

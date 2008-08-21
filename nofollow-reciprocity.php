@@ -3,8 +3,8 @@
 /*
 Plugin Name: Nofollow reciprocity
 Plugin URI: http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php
-Description: Searches for links to large sites using 'nofollow' tags for external links, and puts the same tag on links to those sites (Wikipedia.org, StumbleUpon.com, and similar) Added top 1000 sites from Quantcast.com.
-Author: Lazar Kovacevic(based on 2 plugins quoted below)
+Description: Searches for links to large sites using 'nofollow' tags for external links, and puts the same tag on links to those sites (Wikipedia.org, StumbleUpon.com, and similar) Added top 1000 sites from Quantcast.com. This plugin is based on <a href="http://whatjapanthinks.com/wikipedia-nofollow/">Wikipedia nofollow</a>. and <a href="http://txfx.net/code/wordpress/identify-external-links/">Identify External Links</a>.
+Author: Lazar Kovacevic (based on 2 plugins quoted below)
 Version: 2.0
 Author URI: http://www.inverudio.com/
 */

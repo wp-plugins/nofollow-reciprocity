@@ -4,7 +4,7 @@ Donate link: http://www.explore-ideas.com/
 Tags: blog,comment,comments,google,link,links,nofollow,page,pages,plugin,Post,posts,seo,social,url,wordpress
 Requires at least: 1.5
 Tested up to: 2.5
-Stable tag: trunk
+Stable tag: 2.0
 
 Improves your blog pagerank and search engines rankings (search engine optimization).
 
@@ -26,9 +26,7 @@ Some features:
 1. Unzip and upload `nofollow-reciprocity.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Remember to delete WP-Cache if you have that plugin active. Otherwise, you may not see effect of this plugin immediately.
-4. If you want to add nofollow in comment author's url's whose link point to blacklisted sites, add at the end of the code in 'nofollow-reciprocity.php' file this line: 
-
-`<?php add_filter('get_comment_author_link', 'wp_nofollow_reciprocity', 999); ?>`
+4. If you want to add nofollow in comment author's url's whose link point to blacklisted sites, add at the end of the code in 'nofollow-reciprocity.php' file this line: `<?php add_filter('get_comment_author_link', 'wp_nofollow_reciprocity', 999); ?>`
 
 That's it! Watch the blog traffic statistics. 
 

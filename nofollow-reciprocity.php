@@ -52,14 +52,16 @@ function wp_get_domain_name_from_uri($uri){
 	return $matches[0];	   
 }
 
-function wp_has_no_rel_nofollow($text){
+function wp_has_no_rel_nofollow($text)
+{
 	if ( preg_match("/rel=[\"\'].*?nofollow.*?[\"\']/i", $text ) )
 		return false;
 	else
 		return true;
 }
 
-function wp_inarray($needle, $array, $searchKey = false){
+function wp_inarray($needle, $array, $searchKey = false)
+{
    if ($searchKey) {
        foreach ($array as $key => $value)
            if (stristr($key, $needle)) {return $key;}
@@ -71,10 +73,10 @@ function wp_inarray($needle, $array, $searchKey = false){
    return '';
 }
 
-function parse_nofollow_reciprocity($matches){
-	//add below sites that you think do not deserve credit because they don't give it to other sites.
-	$bad_sites = array(
-"123greetings.com",
+function parse_nofollow_reciprocity($matches)
+{
+	//add in next line's array sites that you think do not deserve credit because they don't give it to other sites.
+	if ( 	wp_inarray(wp_get_domain_name_from_uri($matches[3]), array("123greetings.com",
 "18onlygirls.com",
 "18yearsold.com",
 "40somethingmag.com",
@@ -1073,10 +1075,7 @@ function parse_nofollow_reciprocity($matches){
 "zangocash.com",
 "zappos.com",
 "zillow.com",
-"ztod.com"
-);
-
-	if ( 	wp_inarray(wp_get_domain_name_from_uri($matches[3]), $bad_sites) &&
+"ztod.com")) &&
 		  wp_has_no_rel_nofollow( $matches[1] ) &&
 		  wp_has_no_rel_nofollow( $matches[4] ) )
 	{
@@ -1090,7 +1089,8 @@ function parse_nofollow_reciprocity($matches){
 }
 	
 
-function wp_nofollow_reciprocity($text) {
+function wp_nofollow_reciprocity($text) 
+{
 	$pattern = '/<a (.*?)href=[\"\'](.*?)\/\/(.*?)[\"\'](.*?)>(.*?)<\/a>/i';
 	$text = preg_replace_callback($pattern,'parse_nofollow_reciprocity',$text);
 	return $text;
@@ -1104,4 +1104,3 @@ add_filter('the_excerpt', 'wp_nofollow_reciprocity', 999);
 add_filter('comment_text', 'wp_nofollow_reciprocity', 999);
 
 ?>
-

@@ -15,6 +15,7 @@ Most big sites by default use 'nofollow' tags therefore not trusting external li
 This plugin detects links to above mentioned sites, and puts 'nofollow' tags on them. 'Do unto others as you would have others do unto you.' WordPress is a major blogging platform, with tens of millions of users. If many people using WordPress use this plugin, other big sites may reconsider their 'nofollow' strategy. This plugin expands on Wikipedia nofollow plugin hacked by a revolted blogger. 
 
 **[Download now!](http://downloads.wordpress.org/plugin/nofollow-reciprocity.zip)**
+**[See PageRank screenshot](http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php)**
 
 Some features:
 
@@ -23,7 +24,7 @@ Some features:
 
 == Installation ==
 
-1. Unzip and upload `nofollow-reciprocity.php` to the `/wp-content/plugins/` directory
+1. Unzip and upload to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Remember to delete WP-Cache if you have that plugin active. Otherwise, you may not see effect of this plugin immediately.
 4. If you want to add nofollow in comment author's url's whose link point to blacklisted sites, add at the end of the code in 'nofollow-reciprocity.php' file this line: `<?php add_filter('get_comment_author_link', 'wp_nofollow_reciprocity', 999); ?>`

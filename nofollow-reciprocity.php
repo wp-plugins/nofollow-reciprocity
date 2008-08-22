@@ -1,11 +1,11 @@
 <?php
 
 /*
-Plugin Name: Nofollow reciprocity
+Plugin Name: Nofollow Reciprocity
 Plugin URI: http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php
-Description: Searches for links to large sites using 'nofollow' tags for external links, and puts the same tag on links to those sites (Wikipedia.org, StumbleUpon.com, and similar) Added top 1000 sites from Quantcast.com. This plugin is based on <a href="http://whatjapanthinks.com/wikipedia-nofollow/">Wikipedia nofollow</a>. and <a href="http://txfx.net/code/wordpress/identify-external-links/">Identify External Links</a>.
+Description: Searches for links to large sites using 'nofollow' tags for external links, and puts the same tag on links to those sites (Wikipedia.org, StumbleUpon.com, and similar) Added top 1000 sites from Quantcast.com. This plugin is based on <a href="http://whatjapanthinks.com/wikipedia-nofollow/">Wikipedia nofollow</a> and <a href="http://txfx.net/code/wordpress/identify-external-links/">Identify External Links</a>.
 Author: Lazar Kovacevic
-Version: 2.0
+Version: 2.1
 Author URI: http://www.inverudio.com/
 */
 
@@ -1102,5 +1102,12 @@ add_filter('the_excerpt', 'wp_nofollow_reciprocity', 999);
 
 // delete this one if you don't want it run on comments
 add_filter('comment_text', 'wp_nofollow_reciprocity', 999);
+//add_filter('get_comment_author_link', 'wp_nofollow_reciprocity', 999);
+
+function wp_nofollow_reciprocity_insert_link() {
+	echo ('<p>This blog contributes to the web with <a href="http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php#wp">Nofollow Reciprocity</a>.</p>');
+}
+
+add_action('wp_footer', 'wp_nofollow_reciprocity_insert_link',999);
 
 ?>

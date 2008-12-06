@@ -1105,7 +1105,7 @@ add_filter('comment_text', 'wp_nofollow_reciprocity', 999);
 //add_filter('get_comment_author_link', 'wp_nofollow_reciprocity', 999);
 
 function wp_nofollow_reciprocity_insert_link() {
-	echo ('<p>This blog contributes to the web with <a href="http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php#wp">Nofollow Reciprocity</a>.</p>');
+	echo ('<p>This blog contributes to the web with <a href="http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php#wp">Nofollow</a> <em>Reciprocity</em>.</p>');
 }
 
 add_action('wp_footer', 'wp_nofollow_reciprocity_insert_link',999);

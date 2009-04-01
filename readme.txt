@@ -1,12 +1,12 @@
 === Nofollow Reciprocity ===
 Contributors: lakinekaki
 Donate link: http://www.explore-ideas.com/
-Tags: blog,comment,comments,google,link,links,nofollow,dofollow,page,pages,plugin,Post,posts,seo,social,url,wordpress
+Tags: blog,comment,comments,google,link,links,nofollow,dofollow,page,pages,plugin,Post,posts,seo,social,url,wordpress,pagerank
 Requires at least: 1.5
-Tested up to: 2.6.1
+Tested up to: 2.7.1
 Stable tag: trunk
 
-Improves your blog pagerank and search engines rankings (search engine optimization).
+Improves your blog PageRank and search engines rankings (search engine optimization).
 
 == Description ==
 

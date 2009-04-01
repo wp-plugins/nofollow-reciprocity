@@ -20,6 +20,8 @@ This plugin detects links to above mentioned sites, and puts 'nofollow' tags on 
 
 See **[nofollow PageRank](http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php)** screenshot
 
+Donate **[anonymous ideas](http://www.explore-ideas.com/)**
+
 Some features:
 
 * Increases your blog rankings in Search Engines

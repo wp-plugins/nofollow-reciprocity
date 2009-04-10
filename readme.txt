@@ -12,7 +12,7 @@ Improves your blog PageRank and search engines rankings (search engine optimizat
 
 This is much more than a search engine optimization plugin. 
 
-Most big sites by default use 'nofollow' tags therefore not trusting external links nor users that post those links there. This means that they don't give any credit (in the form of PageRank) to those links and are essentially considering them spam (as that was 'officially' the purpose of 'nofollow' tag introduction - actually messing with the blogging community search engine rankings was the real purpose). This results in their pages appearing higher in search engine results and your pages appearing lower.
+Most big sites by default use '[nofollow](http://www.inverudio.com/NoFollow.php)' tags therefore not trusting external links nor users that post those links there. This means that they don't give any credit (in the form of PageRank) to those links and are essentially considering them spam (as that was 'officially' the purpose of 'nofollow' tag introduction - actually messing with the blogging community search engine rankings was the real purpose). This results in their pages appearing higher in search engine results and your pages appearing lower.
 
 This plugin detects links to above mentioned sites, and puts 'nofollow' tags on them. 'Do unto others as you would have others do unto you.' WordPress is a major blogging platform, with millions of users. If many people using WordPress use this plugin, other big sites may reconsider their 'nofollow' strategy. This plugin expands on Wikipedia nofollow plugin hacked by a revolted blogger. 
 

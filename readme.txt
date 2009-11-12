@@ -3,7 +3,7 @@ Contributors: lakinekaki
 Donate link: http://www.explore-ideas.com/
 Tags: blog,comment,comments,google,link,links,nofollow,dofollow,page,pages,plugin,Post,posts,seo,social,url,wordpress,pagerank
 Requires at least: 1.5
-Tested up to: 2.7.1
+Tested up to: 2.8.5
 Stable tag: trunk
 
 Improves your blog PageRank and search engines rankings (search engine optimization).
@@ -27,6 +27,7 @@ Some features:
 * Increases your blog rankings in Search Engines
 * [Redistributes PageRank to small Websites](http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php)
 * Instead of only dozen famous sites, plugin now has a list of top 1000 sites from quantcast -- most of which use nofollow.
+* This version has a *.co.* domains fix.
 
 == Installation ==
 

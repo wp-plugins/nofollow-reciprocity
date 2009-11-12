@@ -5,7 +5,7 @@ Plugin Name: Nofollow Reciprocity
 Plugin URI: http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php
 Description: Searches for links to large sites using 'nofollow' tags for external links, and puts the same tag on links to those sites (Wikipedia.org, StumbleUpon.com, and similar) Added top 1000 sites from Quantcast.com. This plugin is based on <a href="http://whatjapanthinks.com/wikipedia-nofollow/">Wikipedia nofollow</a> and <a href="http://txfx.net/code/wordpress/identify-external-links/">Identify External Links</a>.
 Author: Lazar Kovacevic
-Version: 2.2
+Version: 2.3
 Author URI: http://www.inverudio.com/
 */
 
@@ -45,11 +45,20 @@ Author URI: http://txfx.net/
 	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-function wp_get_domain_name_from_uri($uri){
-	preg_match("/^(http:\/\/)?([^\/]+)/i", $uri, $matches);
-	$host = $matches[2];
-	preg_match("/[^\.\/]+\.[^\.\/]+$/", $host, $matches);
-	return $matches[0];	   
+function wp_get_domain_name_from_uri($url){
+//	preg_match("/^(http:\/\/)?([^\/]+)/i", $uri, $matches);
+//	$host = $matches[2];
+//	preg_match("/[^\.\/]+\.[^\.\/]+$/", $host, $matches);
+//	return $matches[0];	   
+	if(stristr($url,'http')!=$url)$url = 'http://'.$url;
+	if(substr_count($url,'/')<3)$url .= '/';	
+	$domain = substr($url,strpos($url,'//')+2,(strpos($url,'/',10)-strpos($url,'//')-2));
+	$domain_elements = explode('.',$domain);
+	array_pop($domain_elements); //the last element is never the value you want
+	$domainname = array_pop($domain_elements);
+	if($domainname == "co") $domainname = array_pop($domain_elements);
+	$domain = strtolower(stristr($domain,$domainname));
+	return $domain;
 }
 
 function wp_has_no_rel_nofollow($text)

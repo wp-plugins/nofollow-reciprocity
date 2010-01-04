@@ -73,11 +73,11 @@ function wp_inarray($needle, $array, $searchKey = false)
 {
    if ($searchKey) {
        foreach ($array as $key => $value)
-           if (stristr($key, $needle)) {return $key;}
+           if (@stristr($key, $needle)) {return $key;}
        }
    else {
        foreach ($array as $value)
-           if (stristr($value, $needle)) {return $value;}
+           if (@stristr($value, $needle)) {return $value;}
        }
    return '';
 }

@@ -5,7 +5,7 @@ Plugin Name: Nofollow Reciprocity
 Plugin URI: http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php
 Description: Searches for links to large sites using 'nofollow' tags for external links, and puts the same tag on links to those sites (Wikipedia.org, StumbleUpon.com, and similar) Added top 1000 sites from Quantcast.com. This plugin is based on <a href="http://whatjapanthinks.com/wikipedia-nofollow/">Wikipedia nofollow</a> and <a href="http://txfx.net/code/wordpress/identify-external-links/">Identify External Links</a>.
 Author: Lazar Kovacevic
-Version: 2.3
+Version: 2.3.1
 Author URI: http://www.inverudio.com/
 */
 
@@ -45,19 +45,22 @@ Author URI: http://txfx.net/
 	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
+$wp_nr_footer_link = 1;//change to 0 to remove the 'Improve the web...' link
+
+
 function wp_get_domain_name_from_uri($url){
 //	preg_match("/^(http:\/\/)?([^\/]+)/i", $uri, $matches);
 //	$host = $matches[2];
 //	preg_match("/[^\.\/]+\.[^\.\/]+$/", $host, $matches);
 //	return $matches[0];	   
-	if(stristr($url,'http')!=$url)$url = 'http://'.$url;
+	if(@stristr($url,'http')!=$url)$url = 'http://'.$url;
 	if(substr_count($url,'/')<3)$url .= '/';	
 	$domain = substr($url,strpos($url,'//')+2,(strpos($url,'/',10)-strpos($url,'//')-2));
 	$domain_elements = explode('.',$domain);
 	array_pop($domain_elements); //the last element is never the value you want
 	$domainname = array_pop($domain_elements);
 	if($domainname == "co") $domainname = array_pop($domain_elements);
-	$domain = strtolower(stristr($domain,$domainname));
+	$domain = strtolower(@stristr($domain,$domainname));
 	return $domain;
 }
 
@@ -1106,17 +1109,18 @@ function wp_nofollow_reciprocity($text)
 }
 
 // filters have high priority to make sure that any markup plugins like Textile or Markdown have already created the HTML links
-add_filter('the_content', 'wp_nofollow_reciprocity', 999);
-add_filter('the_excerpt', 'wp_nofollow_reciprocity', 999);
+add_filter('the_content', 'wp_nofollow_reciprocity', 10);
+add_filter('the_excerpt', 'wp_nofollow_reciprocity', 10);
 
 // delete this one if you don't want it run on comments
-add_filter('comment_text', 'wp_nofollow_reciprocity', 999);
+add_filter('comment_text', 'wp_nofollow_reciprocity', 10);
 //add_filter('get_comment_author_link', 'wp_nofollow_reciprocity', 999);
 
 function wp_nofollow_reciprocity_awareness() {
-	echo ('<div style="font-size:85%;clear:both;text-align:center;margin-top:20px;position:relative;color:#555;">Improve the web with <a href="http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php">Nofollow</a> <em>Reciprocity</em>.</div>');
+	global $wp_nr_footer_link;
+	if($wp_nr_footer_link)echo ('<div style="font-size:85%;clear:both;text-align:center;margin-top:20px;position:relative;color:#555;">Improve the web with <a href="http://www.inverudio.com/programs/WordPressBlog/NofollowReciprocity.php">Nofollow</a> <em>Reciprocity</em>.</div>');
 }
-if(function_exists('get_footer'))add_filter('get_footer', 'wp_nofollow_reciprocity_awareness',999);
-else add_action('wp_footer', 'wp_nofollow_reciprocity_awareness',999);
+if(function_exists('get_footer'))add_filter('get_footer', 'wp_nofollow_reciprocity_awareness',10);
+else add_action('wp_footer', 'wp_nofollow_reciprocity_awareness',10);
 
 ?>

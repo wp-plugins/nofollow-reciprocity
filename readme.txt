@@ -3,7 +3,7 @@ Contributors: lakinekaki
 Donate link: http://www.explore-ideas.com/
 Tags: blog,comment,comments,google,link,links,nofollow,dofollow,page,pages,plugin,Post,posts,seo,social,url,wordpress,pagerank
 Requires at least: 1.5
-Tested up to: 2.8.5
+Tested up to: 2.9.1
 Stable tag: trunk
 
 Improves your blog PageRank and search engines rankings (search engine optimization).
